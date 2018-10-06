@@ -1,0 +1,16 @@
+.productsDiv {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+
+  .productsTitle {
+    h3 {
+      margin-left: 60px;
+    }
+
+    h5 {
+      color: gray;
+    }
+  }
+
+}

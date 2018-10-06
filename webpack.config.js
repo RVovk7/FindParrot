@@ -32,6 +32,7 @@ module.exports = {
       'containers': path.resolve(__dirname, './src/app/containers'),
       'screen': path.resolve(__dirname, './src/app/screen'),
       'style': path.resolve(__dirname, './src/app/style'),
+      'assets': path.resolve(__dirname, './src/assets'),
     }
   },
   module: {
