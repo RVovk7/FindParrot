@@ -1,0 +1,145 @@
+$graySearchTitle: rgb(70, 70, 70);
+$graySearchInput: rgb(111, 111, 111);
+$searchShandow: 0 1px 5px .3px gray;
+
+.quickSearch {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  background: url(http://russenergo.ru/wp-content/uploads/2015/07/background-site1.jpg) no-repeat center center fixed;
+  padding: 0;
+  margin: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /*** Header ***/
+  header {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+
+    .headLogo {
+      display: inline-flex;
+      margin-left: 3rem;
+    }
+
+    .ButtonToolbar {
+      margin-right: 5rem;
+
+      Button {
+        border: none;
+        background: none;
+        font-size: 1rem;
+        display: inline-flex;
+        margin-left: 2px;
+
+        &:last-child {
+          border-radius: 0;
+          border-left: solid gray .5px;
+        }
+      }
+    }
+  }
+
+  /***   Search  ***/
+  .search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(70, 70, 70);
+    margin-top: 150px;
+    h1 {
+      span {
+        color: green;
+      }
+    }
+
+    .AfterSearchText {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      color: $graySearchInput;
+      margin-bottom: 20px;
+
+      h5 {
+        margin: 3px;
+
+        &:nth-child(2) {
+          &:before {
+            content: "\b7\a0";
+          }
+
+          &:after {
+            content: "\a0\b7";
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .searchDiv {
+    display: flex;
+    margin-top: 20px;
+
+    .DropdownButton {
+      border-radius: 7px 0 0 7px;
+      padding: 15px;
+      border: none;
+      height: 60px;
+      box-shadow: $searchShandow;
+      color: gray;
+      width: 120px;
+    }
+
+    .searchInput {
+      border: none;
+      width: 400px;
+      height: 60px;
+      font-size: 3rem;
+      box-shadow: $searchShandow;
+
+    }
+
+
+    .searchButton {
+      padding: 15px;
+      border: none;
+      border-right: .1px solid black;
+      background-color: rgb(31, 171, 186);
+      color: white;
+      border-radius: 0 7px 7px 0;
+      box-shadow: $searchShandow;
+    }
+
+
+  }
+
+  /*-- searchDiv --*/
+
+  .bottomButton {
+    display: flex;
+    flex-direction: row;
+    justify-content:  center;
+    margin-top: 150px;
+    Button {
+      border: none;
+      border-radius: 0;
+      margin: 1rem; 
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 3rem;
+      color: green;
+    }
+
+  }
+}
+
+/*-- quickSearch --*/
