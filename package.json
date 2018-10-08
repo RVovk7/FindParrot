@@ -29,7 +29,7 @@
     "mini-css-extract-plugin": "^0.4.3",
     "node-sass": "^4.9.3",
     "prettier": "^1.14.2",
-    "react-hot-loader": "^4.3.4",
+    "react-hot-loader": "^4.3.11",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.22.1",
     "ts-loader": "^4.4.2",
@@ -44,6 +44,7 @@
     "@types/react-bootstrap": "^0.32.14",
     "classnames": "^2.2.6",
     "react": "^16.5.2",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0"

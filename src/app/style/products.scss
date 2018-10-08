@@ -1,9 +1,14 @@
 .productsDiv {
+  background-color: rgb(247, 247, 247);
   display: flex;
   justify-content: center;
-  height: 500px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
 
   .productsTitle {
+    justify-content: center;
+
     h3 {
       margin-left: 60px;
     }
@@ -13,4 +18,29 @@
     }
   }
 
+
+  .productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .productItem {
+      background-color: white;
+  
+
+      flex-direction: column;
+      border: solid white 7px;
+      margin: 20px;
+
+      img {
+        width: 250px;
+        height: 250px;
+      }
+
+      h4 {
+        color: gray;
+      }
+
+    }
+  }
 }
