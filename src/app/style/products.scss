@@ -7,8 +7,6 @@
   flex-flow: row wrap;
 
   .productsTitle {
-    justify-content: center;
-
     h3 {
       margin-left: 60px;
     }
@@ -17,17 +15,13 @@
       color: gray;
     }
   }
-
-
+  
   .productList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
     .productItem {
       background-color: white;
-  
-
       flex-direction: column;
       border: solid white 7px;
       margin: 20px;
@@ -40,7 +34,6 @@
       h4 {
         color: gray;
       }
-
     }
   }
 }

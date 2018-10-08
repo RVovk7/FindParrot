@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ProductData from 'assets/ProductData';
+import ProductData from 'assets/data/ProductData';
 import ProductItem from 'components/ProductItem';
 import ProductTitle from 'screen/ProductTitle';
 

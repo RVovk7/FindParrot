@@ -1,15 +1,49 @@
-$backC: rgb(31, 172,186);
+$backC: rgb(31, 172, 186);
+
 .bottomBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $backC;
+
+  .commentTitle {
     display: flex;
-    flex-direction: column;
-    height: 500px;
-    background-color: $backC;
-    .carouselDiv {
-        margin-top: 200px;
-    }
-    .productsTitle{
+    flex-direction: row;
+    justify-content: center;
+    .cText {
+      flex-direction: column;
+      margin-bottom: 50px;
+      h3{
+        margin-left: 30px; 
+      }
+      color: white;
 
-     
     }
+  }
 
+  .carouselDiv {
+    display: flex;
+    margin: 0 300px 100px;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .carouselItem {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      overflow: visible;
+      height: 300px;
+      border: solid white .5px;
+      border-radius: 20px;
+      background-color: #fff;
+      color: #000;
+
+      img {
+        width: 96px;
+        height: 96px;
+        border: solid 1px white;
+        border-radius: 48px;
+      }
+    }
+  }
 }

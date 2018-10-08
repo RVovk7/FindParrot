@@ -54,6 +54,7 @@ $searchShandow: 0 1px 5px .3px gray;
     flex-direction: column;
     color: rgb(70, 70, 70);
     margin-top: 150px;
+
     h1 {
       span {
         color: green;
@@ -74,7 +75,6 @@ $searchShandow: 0 1px 5px .3px gray;
           &:before {
             content: "\b7\a0";
           }
-
           &:after {
             content: "\a0\b7";
           }
@@ -102,7 +102,7 @@ $searchShandow: 0 1px 5px .3px gray;
 
     .searchInput {
       border: none;
-      width: 400px;
+      min-width: 400px;
       height: 60px;
       font-size: 3rem;
       box-shadow: $searchShandow;
@@ -128,12 +128,13 @@ $searchShandow: 0 1px 5px .3px gray;
   .bottomButton {
     display: flex;
     flex-direction: row;
-    justify-content:  center;
+    justify-content: center;
     margin-top: 150px;
+
     Button {
       border: none;
       border-radius: 0;
-      margin: 1rem; 
+      margin: 1rem;
       background-color: rgba(255, 255, 255, 0.9);
       padding: 3rem;
       color: green;
