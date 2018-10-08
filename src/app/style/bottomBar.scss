@@ -3,6 +3,7 @@ $backC: rgb(31, 172, 186);
 .bottomBar {
   display: flex;
   flex-direction: column;
+  min-height: 600px;
   justify-content: center;
   background-color: $backC;
 
@@ -10,12 +11,15 @@ $backC: rgb(31, 172, 186);
     display: flex;
     flex-direction: row;
     justify-content: center;
+
     .cText {
       flex-direction: column;
       margin-bottom: 50px;
-      h3{
-        margin-left: 30px; 
+
+      h3 {
+        margin-left: 30px;
       }
+
       color: white;
 
     }
@@ -23,27 +27,58 @@ $backC: rgb(31, 172, 186);
 
   .carouselDiv {
     display: flex;
-    margin: 0 300px 100px;
     flex-direction: row;
     justify-content: space-around;
+    padding: 0 150px;
+
+
+    .carousel-inner {
+      overflow: visible;
+    }
+
+    .carousel-control {
+      background-image: none;
+    }
 
     .carouselItem {
       display: flex;
       flex-direction: column;
-      width: 300px;
-      overflow: visible;
       height: 300px;
+      max-width: 600px;
       border: solid white .5px;
+      padding: 30px;
       border-radius: 20px;
       background-color: #fff;
       color: #000;
+      box-shadow: -5px 1px 30px 1px rgba(0,0,0,0.75);
 
       img {
+        position: absolute;
+        top: -40px;
+        align-self: center;
         width: 96px;
         height: 96px;
-        border: solid 1px white;
+        border: solid 4px white;
         border-radius: 48px;
       }
+
+      p {
+        margin-top: 70px;
+      }
+
+      .commentAutor{
+        align-self: center;
+        h5{ 
+          color: $backC;
+        }
+        h6{
+          color: gray;
+        }
+      }
     }
-  }
-}
+
+  } // carouselDiv
+
+
+} // bottomBar
+

@@ -34,6 +34,7 @@ export default class CommentSlider extends React.Component<CommentSliderProps, a
           activeIndex={index}
           direction={direction}
           onSelect={this.handleSelect}
+          indicators={false}
         >
 
           {commentData.map(e => <Carousel.Item key={e.text}>

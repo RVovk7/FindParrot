@@ -11,10 +11,14 @@ export default class CarouselItem extends React.Component<CarouselItemProps, any
         return (
             <div className="carouselDiv">
                 <div className="carouselItem">
-                <img src={image} />
-                    <div className="carouselTxt">
-                       <p>{text}</p>
-                </div>
+                    <img src={image} />
+                    <p>{text}</p>
+                    <div className="commentAutor">
+                        <h5>Some People</h5>
+                        <h6>His job</h6>
+                    </div>
+
+
                 </div>
             </div>
         );
