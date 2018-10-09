@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="footLogo">
                 <img src={parrotLogoWhite} alt="" />
                 <div className="logoFootTxt">
-                    <h4>FIND PARROT</h4>
+                    <h6>FIND PARROT</h6>
                     <div className="subFoot">
                         <p>INNOVATE</p>
                         <p>LIST</p>

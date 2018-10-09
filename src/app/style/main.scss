@@ -18,6 +18,12 @@ body {
   background-size: cover;
 }
 
+@mixin lg() {
+  @media (min-width: 48rem) {
+    @content;
+  }
+}
+
 @import 'topBar.scss';
 @import 'products.scss';
 @import 'bottomBar.scss';

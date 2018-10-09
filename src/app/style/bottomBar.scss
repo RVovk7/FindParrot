@@ -11,6 +11,7 @@ $backFooter: rgb(46, 46, 46);
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 50px;
 
     .cText {
       flex-direction: column;
@@ -19,7 +20,6 @@ $backFooter: rgb(46, 46, 46);
       h3 {
         margin-left: 30px;
       }
-
       color: white;
     }
   }
@@ -71,6 +71,7 @@ $backFooter: rgb(46, 46, 46);
 
         h5 {
           color: $backC;
+          margin-left: 5px;
         }
 
         h6 {
@@ -91,6 +92,7 @@ $backFooter: rgb(46, 46, 46);
 
     .footLogo {
       align-self: center;
+      margin-top: 20px;
 
       img {
         height: 64px;
@@ -98,11 +100,18 @@ $backFooter: rgb(46, 46, 46);
       }
 
       .logoFootTxt {
+        margin-left: 20px;
+
+        h6{
+          margin-top: 0;
+        }
+
         .subFoot {
           display: flex;
+          margin-top: -10px;
 
           p {
-            font-size: .9rem;
+            font-size: .59rem;
 
             &:nth-child(2) {
               &:before {
@@ -124,7 +133,7 @@ $backFooter: rgb(46, 46, 46);
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
-
+      margin: 20px;
       Button {
         align-self: center;
         color: white;
@@ -133,25 +142,29 @@ $backFooter: rgb(46, 46, 46);
         font-size: 1.3rem;
       }
     }
-  .bottomFoot{
-    display: flex;
-    background-color: rgb(34,34,34);
-    justify-content: center;
-    min-height: 50px;
-    padding-top: 2rem;
-    .subBFoot{
-      display: flex;
-      img{
-        margin: .3rem .5rem;
-        widows: 10px;
-        height: 10px;
-      }
-      p{
-        font-size: 1.2rem;
-      }
 
+    .bottomFoot {
+      display: flex;
+      background-color: rgb(34, 34, 34);
+      justify-content: center;
+      min-height: 50px;
+      padding-top: 2rem;
+
+      .subBFoot {
+        display: flex;
+
+        img {
+          margin: .3rem .5rem;
+          widows: 10px;
+          height: 10px;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+
+      }
     }
-  }
 
   }
 

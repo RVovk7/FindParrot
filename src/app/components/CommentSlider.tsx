@@ -6,6 +6,10 @@ export interface CommentSliderProps {
   commentData: {
     text: string;
     image: string;
+    author: {
+      name: string;
+      position: string;
+  }
   }[];
 };
 
@@ -38,7 +42,7 @@ export default class CommentSlider extends React.Component<CommentSliderProps, a
         >
 
           {commentData.map(e => <Carousel.Item key={e.text}>
-            <CarouselItem text={e.text} image={e.image} />
+            <CarouselItem text={e.text} image={e.image} author={e.author} />
           </Carousel.Item>)}
 
         </Carousel>
