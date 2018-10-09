@@ -1,15 +1,15 @@
 import * as React from 'react';
 import ProductData from 'assets/data/ProductData';
-import ProductItem from 'components/ProductItem';
+import ProductList from 'components/ProductList';
 import ProductTitle from 'screen/ProductTitle';
+import ProductLink from 'screen/ProductLink';
 
 export default function Products() {
     return (
         <div className="productsDiv">
             <ProductTitle />
-            <div className="productList">
-                {ProductData.map(e => <ProductItem key={e.title} title={e.title} image={e.image} />)}
-            </div>
+            <ProductList ProductData={ProductData} />
+            <ProductLink />
         </div>
     );
 }

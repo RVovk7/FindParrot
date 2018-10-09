@@ -1,10 +1,6 @@
 import * as React from 'react';
 
-export interface CommentTitleProps {
-}
-
-export default class CommentTitle extends React.Component<CommentTitleProps, any> {
-    public render() {
+export default function CommentTitle() {
         return (
             <div className="commentTitle">
             <div className="cText">
@@ -14,5 +10,4 @@ export default class CommentTitle extends React.Component<CommentTitleProps, any
                   
             </div>
         );
-    }
 }

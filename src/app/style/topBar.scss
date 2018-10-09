@@ -5,8 +5,8 @@ $searchShandow: 0 1px 5px .3px gray;
 .quickSearch {
   display: flex;
   flex-direction: column;
-  height: 700px;
-  background: url(http://russenergo.ru/wp-content/uploads/2015/07/background-site1.jpg) no-repeat center center fixed;
+  min-height: 700px;
+  background: url(../../assets/media/backTop.jpg) no-repeat center center fixed;
   padding: 0;
   margin: 0;
   -webkit-background-size: cover;
@@ -23,8 +23,55 @@ $searchShandow: 0 1px 5px .3px gray;
     align-items: center;
 
     .headLogo {
-      display: inline-flex;
+      display: flex;
       margin-left: 3rem;
+      margin-top: 3rem;
+
+      img {
+        width: 100px;
+        height: 64px;
+      }
+
+      .logoHeadTxt {
+        display: flex;
+        flex-direction: column;
+
+        h4 {
+          color: green;
+        }
+
+        .sub {
+          display: flex;
+          flex-direction: row;
+          margin-top:-10px;
+          p {
+            font-size: .87rem;
+
+            &:first-child {
+              color: rgb(31, 172, 186);
+            }
+
+            &:nth-child(2) {
+              color: orange;
+
+              &:before {
+                color: black;
+                content: "\a0\b7\a0";
+              }
+
+              &:after {
+                color: black;
+                content: "\a0\b7\a0";
+              }
+            }
+
+            &:last-child {
+              color: green;
+            }
+          }
+        }
+      }
+
     }
 
     .ButtonToolbar {
@@ -36,6 +83,7 @@ $searchShandow: 0 1px 5px .3px gray;
         font-size: 1rem;
         display: inline-flex;
         margin-left: 2px;
+    
 
         &:last-child {
           border-radius: 0;
@@ -91,26 +139,31 @@ $searchShandow: 0 1px 5px .3px gray;
     margin-top: 20px;
 
     .DropdownButton {
+      flex: 1;
       border-radius: 7px 0 0 7px;
       padding: 15px;
       border: none;
       height: 60px;
       box-shadow: $searchShandow;
       color: gray;
-      width: 120px;
+      min-width: 120px;
     }
 
     .searchInput {
-      border: none;
+      display: flex;
       min-width: 400px;
+      border: none;
       height: 60px;
       font-size: 3rem;
+      flex: 3;
       box-shadow: $searchShandow;
 
     }
 
 
     .searchButton {
+      flex: 1;
+      max-width: 150px;
       padding: 15px;
       border: none;
       border-right: .1px solid black;
@@ -136,9 +189,14 @@ $searchShandow: 0 1px 5px .3px gray;
       border: none;
       border-radius: 0;
       margin: 1rem;
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 3rem;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 2rem;
       color: green;
+      img{
+        margin: 5px;
+        width: 32px;
+        height: 32px;
+      }
     }
 
   }

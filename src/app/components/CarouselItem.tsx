@@ -17,8 +17,6 @@ export default class CarouselItem extends React.Component<CarouselItemProps, any
                         <h5>Some People</h5>
                         <h6>His job</h6>
                     </div>
-
-
                 </div>
             </div>
         );

@@ -1,9 +1,9 @@
 $backC: rgb(31, 172, 186);
+$backFooter: rgb(46, 46, 46);
 
 .bottomBar {
   display: flex;
   flex-direction: column;
-  min-height: 600px;
   justify-content: center;
   background-color: $backC;
 
@@ -21,7 +21,6 @@ $backC: rgb(31, 172, 186);
       }
 
       color: white;
-
     }
   }
 
@@ -29,7 +28,7 @@ $backC: rgb(31, 172, 186);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 0 150px;
+    margin-bottom: 100px;
 
 
     .carousel-inner {
@@ -38,19 +37,20 @@ $backC: rgb(31, 172, 186);
 
     .carousel-control {
       background-image: none;
+      margin-bottom: 100px;
     }
 
     .carouselItem {
       display: flex;
       flex-direction: column;
-      height: 300px;
+      min-height: 300px;
       max-width: 600px;
       border: solid white .5px;
       padding: 30px;
       border-radius: 20px;
       background-color: #fff;
       color: #000;
-      box-shadow: -5px 1px 30px 1px rgba(0,0,0,0.75);
+      box-shadow: -5px 1px 30px 1px rgba(0, 0, 0, 0.75);
 
       img {
         position: absolute;
@@ -66,19 +66,96 @@ $backC: rgb(31, 172, 186);
         margin-top: 70px;
       }
 
-      .commentAutor{
+      .commentAutor {
         align-self: center;
-        h5{ 
+
+        h5 {
           color: $backC;
         }
-        h6{
+
+        h6 {
           color: gray;
         }
       }
     }
 
-  } // carouselDiv
+  }
 
+  // carouselDiv
 
-} // bottomBar
+  footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $backFooter;
+    color: white;
 
+    .footLogo {
+      align-self: center;
+
+      img {
+        height: 64px;
+        width: 100px;
+      }
+
+      .logoFootTxt {
+        .subFoot {
+          display: flex;
+
+          p {
+            font-size: .9rem;
+
+            &:nth-child(2) {
+              &:before {
+                content: "\a0\b7\a0";
+              }
+
+              &:after {
+                content: "\a0\b7\a0";
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+    .footToolbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      Button {
+        align-self: center;
+        color: white;
+        border: none;
+        background: none;
+        font-size: 1.3rem;
+      }
+    }
+  .bottomFoot{
+    display: flex;
+    background-color: rgb(34,34,34);
+    justify-content: center;
+    min-height: 50px;
+    padding-top: 2rem;
+    .subBFoot{
+      display: flex;
+      img{
+        margin: .3rem .5rem;
+        widows: 10px;
+        height: 10px;
+      }
+      p{
+        font-size: 1.2rem;
+      }
+
+    }
+  }
+
+  }
+
+  // footer
+}
+
+// bottomBar
