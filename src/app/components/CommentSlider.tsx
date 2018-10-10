@@ -3,7 +3,6 @@ import { Carousel } from 'react-bootstrap';
 import CarouselItem from 'components/CarouselItem';
 
 const carouselItemClass = document.getElementsByClassName('item');
-
 export interface CommentSliderProps {
   commentData: {
     text: string;
@@ -35,15 +34,16 @@ export default class CommentSlider extends React.Component<CommentSliderProps, a
   }
 
   initialSlideE = () => {
-    carouselItemClass[carouselItemClass.length - 2].classList.toggle('nextItem');
-    carouselItemClass[0].classList.toggle('prevItem');
+    carouselItemClass[carouselItemClass.length - 2].classList.toggle('prevItem');
+    carouselItemClass[0].classList.toggle('nextItem');
+
   }
 
   handleSelect = (sIndex?: any, e?: any) => {
     this.setState({
       index: sIndex,
       direction: e.direction
-    }, this.classSwitch)
+    })
   }
 
   classSwitch = () => {
@@ -58,11 +58,11 @@ export default class CommentSlider extends React.Component<CommentSliderProps, a
     if (!StartI && !EndI) {
       carouselItemClass[index - 1].classList.toggle('prevItem');
       carouselItemClass[index + 1].classList.toggle('nextItem');
+      carouselItemClass[index + 1].classList.toggle('right');
     }
 
     StartI && this.initialSlideS();
     EndI && this.initialSlideE();
-
   }
 
   public render() {
@@ -75,6 +75,7 @@ export default class CommentSlider extends React.Component<CommentSliderProps, a
           direction={direction}
           onSelect={this.handleSelect}
           indicators={false}
+          onSlideEnd={this.classSwitch}
         >
           {commentData.map(e => <Carousel.Item key={e.text}>
             <CarouselItem text={e.text} image={e.image} author={e.author} />
