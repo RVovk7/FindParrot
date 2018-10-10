@@ -75,7 +75,6 @@ $searchShandow: 0 1px 5px .3px gray;
     }
 
     .ButtonToolbar {
-      margin-right: 5rem;
 
       Button {
         border: none;
@@ -190,12 +189,12 @@ $searchShandow: 0 1px 5px .3px gray;
       border-radius: 0;
       margin: 1rem;
       background-color: rgba(255, 255, 255, 0.7);
-      padding: 2rem;
+      padding: 1.5rem;
       color: green;
       img{
         margin: 5px;
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
       }
     }
 
