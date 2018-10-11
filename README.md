@@ -1,1 +1,1 @@
-# Frontend layout with React, Redux & TypeScript
+# React, Redux & TypeScript
