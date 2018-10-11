@@ -1,1 +1,1 @@
-# React, Redux & TypeScript
+# React & TypeScript
