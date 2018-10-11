@@ -5,14 +5,14 @@ $backPC: rgb(31, 172, 186);
   background-color: $backProduct;
   display: flex;
   flex-direction: column;
-
+  min-height: 100vh;
 
   .productsTitle {
     max-width: 400px;
     align-self: center;
 
     h3 {
-      margin-left: 50px;
+      margin-left: 3vw;
     }
 
     h5 {
@@ -23,6 +23,7 @@ $backPC: rgb(31, 172, 186);
   .productList {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 10vh;
     align-self: center;
     max-width: 1000px;
 
@@ -34,7 +35,7 @@ $backPC: rgb(31, 172, 186);
 
       img {
         width: 250px;
-        height: 250px;
+        height: 200px;
       }
 
       h4 {

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Carousel } from 'react-bootstrap';
 import CarouselItem from 'components/CarouselItem';
-
 const carouselItemClass = document.getElementsByClassName('item');
+
 export interface CommentSliderProps {
   commentData: {
     text: string;
@@ -20,26 +20,27 @@ export default class CommentSlider extends React.Component<CommentSliderProps, a
     this.state = {
       index: 0,
       direction: null,
-
     };
   }
 
   componentDidMount() {
-    this.initialSlideS();
+    this.initialSlide();
   }
 
-  initialSlideS = () => {
+  initialSlide = () => {
     carouselItemClass[carouselItemClass.length - 1].classList.toggle('prevItem');
     carouselItemClass[1].classList.toggle('nextItem');
   }
 
-  initialSlideE = () => {
+  lastSlide = () => {
     carouselItemClass[carouselItemClass.length - 2].classList.toggle('prevItem');
     carouselItemClass[0].classList.toggle('nextItem');
-
   }
 
   handleSelect = (sIndex?: any, e?: any) => {
+    const animateFix = document.querySelectorAll('.prevItem,.nextItem');
+    Array.from(animateFix).forEach(el => el.classList.remove('prevItem', 'nextItem'))
+
     this.setState({
       index: sIndex,
       direction: e.direction
@@ -51,18 +52,15 @@ export default class CommentSlider extends React.Component<CommentSliderProps, a
     const StartI = index === 0;
     const EndI = index === carouselItemClass.length - 1;
 
-    Array.from(carouselItemClass).forEach(el => {
-      el.classList.remove('prevItem', 'nextItem');
-    });
+    Array.from(carouselItemClass).forEach(el => el.classList.remove('prevItem', 'nextItem'));
 
     if (!StartI && !EndI) {
       carouselItemClass[index - 1].classList.toggle('prevItem');
       carouselItemClass[index + 1].classList.toggle('nextItem');
-      carouselItemClass[index + 1].classList.toggle('right');
     }
 
-    StartI && this.initialSlideS();
-    EndI && this.initialSlideE();
+    StartI && this.initialSlide();
+    EndI && this.lastSlide();
   }
 
   public render() {

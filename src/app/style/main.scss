@@ -7,22 +7,20 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-
-  padding: 0;
-  margin: 0;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 @mixin lg() {
-  @media (min-width: 48rem) {
+  @media (min-width: 640px) {
     @content;
   }
 }
+
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+}
+
+
 
 @import 'topBar.scss';
 @import 'products.scss';
