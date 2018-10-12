@@ -18,6 +18,7 @@
       "app/*": ["./app/*"],
       "components/*": ["./app/components/*"],
       "containers/*": ["./app/containers/*"],
+      "modules/*": ["./app/modules/*"],
       "screen/*": ["./app/screen/*"],
       "assets/*": ["./assets/*"],
     }

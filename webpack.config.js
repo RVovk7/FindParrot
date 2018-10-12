@@ -33,6 +33,7 @@ module.exports = {
       'screen': path.resolve(__dirname, './src/app/screen'),
       'style': path.resolve(__dirname, './src/app/style'),
       'assets': path.resolve(__dirname, './src/assets'),
+      'modules': path.resolve(__dirname, './src/app/modules'),
     }
   },
   module: {
