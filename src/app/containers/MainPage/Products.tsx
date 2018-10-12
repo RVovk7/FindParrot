@@ -1,8 +1,8 @@
 import * as React from 'react';
 import ProductData from 'assets/data/ProductData';
 import ProductList from 'components/ProductList';
-import ProductTitle from 'screen/ProductTitle';
-import ProductLink from 'screen/ProductLink';
+import ProductTitle from 'app/screen/MainPage/ProductTitle';
+import ProductLink from 'app/screen/MainPage/ProductLink';
 
 export default function Products() {
     return (

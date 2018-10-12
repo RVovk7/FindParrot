@@ -1,14 +1,17 @@
 import * as React from "react";
+import MainPage from 'containers/MainPage';
+import SingUpIN from 'app/containers/SignInUp';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
-import TopBar from 'containers/TopBar';
-import Products from 'containers/Products';
-import BottomBar from 'containers/BottomBar';
 import './style/main.scss';
 
-export const App = hot(module)(() => (
-    <React.Fragment>
-        <TopBar />
-        <Products />
-        <BottomBar />
-    </React.Fragment>
+const App = hot(module)(() => (
+    <Router>
+        <React.Fragment>
+            <Route exact path="/main" component={MainPage} />
+            <Route exact path="/" component={SingUpIN} />
+        </React.Fragment>
+    </Router>
 ));
+
+export default App;

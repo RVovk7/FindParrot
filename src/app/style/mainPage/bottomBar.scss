@@ -1,7 +1,3 @@
-$backC: rgb(31, 172, 186);
-$backFooter: rgb(46, 46, 46);
-
-
 
 .bottomBar {
   display: flex;
@@ -179,92 +175,95 @@ $backFooter: rgb(46, 46, 46);
 
   // carouselDiv
 
-  footer {
-    display: flex;
-    flex-direction: column;
-    background-color: $backFooter;
-    color: white;
 
-    .footLogo {
-      align-self: center;
-      margin-top: 20px;
 
-      img {
-        height: 64px;
-        width: 100px;
-      }
 
-      .logoFootTxt {
-        margin-left: 20px;
+}
 
-        h6 {
-          margin-top: 0;
-        }
 
-        .subFoot {
-          display: flex;
-          margin-top: -10px;
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $backFooter;
+  color: white;
 
-          p {
-            font-size: .59rem;
+  .footLogo {
+    align-self: center;
+    margin-top: 20px;
 
-            &:nth-child(2) {
-              &:before {
-                content: "\a0\b7\a0";
-              }
-
-              &:after {
-                content: "\a0\b7\a0";
-              }
-            }
-          }
-
-        }
-      }
+    img {
+      height: 64px;
+      width: 100px;
     }
 
-    .footToolbar {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 20px;
+    .logoFootTxt {
+      margin-left: 20px;
 
-      Button {
-        align-self: center;
-        color: white;
-        border: none;
-        background: none;
-        font-size: 1.3rem;
+      h6 {
+        margin-top: 0;
       }
-    }
 
-    .bottomFoot {
-      display: flex;
-      background-color: rgb(34, 34, 34);
-      justify-content: center;
-      min-height: 50px;
-      padding-top: 2em;
-
-      .subBFoot {
+      .subFoot {
         display: flex;
-
-        img {
-          margin: .3em .5em;
-          widows: 10px;
-          height: 10px;
-        }
+        margin-top: -10px;
 
         p {
-          font-size: 1.2rem;
+          font-size: .59rem;
+
+          &:nth-child(2) {
+            &:before {
+              content: "\a0\b7\a0";
+            }
+
+            &:after {
+              content: "\a0\b7\a0";
+            }
+          }
         }
 
       }
     }
-
   }
 
-  // footer
+  .footToolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+
+    Button {
+      align-self: center;
+      color: white;
+      border: none;
+      background: none;
+      font-size: 1.3rem;
+    }
+  }
+
+  .bottomFoot {
+    display: flex;
+    background-color: rgb(34, 34, 34);
+    justify-content: center;
+    min-height: 50px;
+    padding-top: 2em;
+
+    .subBFoot {
+      display: flex;
+
+      img {
+        margin: .3em .5em;
+        widows: 10px;
+        height: 10px;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+    }
+  }
+
 }
 
 // bottomBar

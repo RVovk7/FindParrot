@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Header from 'screen/Header';
-import Search from 'screen/Search';
-import BottomButton from 'screen/BottomButton';
+import Search from 'app/screen/MainPage/Search';
+import BottomButton from 'app/screen/MainPage/BottomButton';
 
 export default function TopBar(){ 
     return (

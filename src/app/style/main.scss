@@ -7,21 +7,32 @@
   box-sizing: border-box;
 }
 
-@mixin lg() {
-  @media (min-width: 640px) {
-    @content;
-  }
-}
-
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   padding: 0;
   margin: 0;
   background-size: cover;
 }
+/*----*/
+$graySearchTitle: rgb(70, 70, 70);
+$graySearchInput: rgb(111, 111, 111);
+$searchShandow: 0 1px 5px .3px gray;
+$backC: rgb(31, 172, 186);
+$backFooter: rgb(46, 46, 46);
+/*----*/
 
 
+@mixin lg() {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
 
-@import 'topBar.scss';
-@import 'products.scss';
-@import 'bottomBar.scss';
+@import 'header.scss';
+@import 'footer.scss';
+
+@import './mainPage/topBar.scss';
+@import './mainPage/products.scss';
+@import './mainPage/bottomBar.scss';
+
+@import 'signInUp.scss'

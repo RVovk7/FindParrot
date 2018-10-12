@@ -1,5 +1,5 @@
 import * as React from 'react';
-import CommentTitle from 'screen/CommentTitle';
+import CommentTitle from 'screen/MainPage/CommentTitle';
 import CommentSlider from 'components/CommentSlider';
 import CommentData from 'assets/data/CommentData';
 import Footer from 'screen/Footer';
