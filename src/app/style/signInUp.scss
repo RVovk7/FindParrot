@@ -1,32 +1,75 @@
 .signInUp {
   display: flex;
   flex-direction: row;
-  min-height: 67vh;
-  margin-top: 20vh;
+  min-height: 75vh;
   width: 100vw;
 
-  .signIn {
-    width: 50vw;
-  }
-
-  .signUp {
-    width: 50vw;
-  }
-
   Form {
-    margin: 50px;
-    max-width: 30vw;
+    padding: 25vh 10vw;
+
+    h3 {
+      margin-bottom: 5vh;
+    }
 
     input {
+      background-color: rgba(0, 0, 0, 0);
+      max-width: 30vw;
       border: none;
       border-radius: 0px;
-      border-bottom: .5px solid gray;
+
       box-shadow: none;
     }
 
     Button {
-      width: 10vw;
+      width: 120px;
+      margin-left: 12vw;
       border-radius: 25px;
+      border: none;
+      padding: 10px;
     }
   }
+
+  .signIn {
+    width: 50vw;
+
+    input {
+      border-bottom: .5px solid gray;
+
+    }
+
+    Button {
+      background-color: $backC;
+      img{
+        height: 24px;
+
+      }
+    }
+  }
+
+  .signUp {
+    background: url(../../assets/media/signUp.png);
+    background-size: cover;
+    width: 50vw;
+
+    h3 {
+      color: white;
+    }
+
+    input {
+      border-bottom: .5px solid white;
+
+      &::placeholder {
+        color: white;
+      }
+    }
+
+    Button {
+      color: $backC;
+    }
+
+
+
+  }
+
+
 }

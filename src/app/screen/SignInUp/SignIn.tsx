@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Form, FormGroup, Col, FormControl, Button } from 'react-bootstrap';
+const gridIcon = require('assets/media/long-arrow-alt-right-solid.svg');
 // import { reduxForm } from 'redux-form';
 
 export interface SignInProps {
@@ -24,7 +25,7 @@ export default class SignIn extends React.Component<SignInProps, any> {
 
         <FormGroup>
           <Col smOffset={2} sm={10}>
-            <Button type="submit">Sign in</Button>
+            <Button type="submit"><img src={gridIcon} alt="" /></Button>
           </Col>
         </FormGroup>
       </Form>
