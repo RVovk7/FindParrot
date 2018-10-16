@@ -34,6 +34,7 @@ module.exports = {
       'style': path.resolve(__dirname, './src/app/style'),
       'assets': path.resolve(__dirname, './src/assets'),
       'modules': path.resolve(__dirname, './src/app/modules'),
+      'util': path.resolve(__dirname, './src/app/util'),
     }
   },
   module: {
@@ -55,6 +56,14 @@ module.exports = {
 					'style-loader',
 					'css-loader',
 					'sass-loader',
+				],
+      },
+      {
+				test: /\.css$/,
+				exclude: /node_modules/,
+				use: [
+					'style-loader',
+					'css-loader',
 				],
 			},
       { test: /\.html$/, use: 'html-loader' },

@@ -30,9 +30,5 @@ $backFooter: rgb(46, 46, 46);
 
 @import 'header.scss';
 @import 'footer.scss';
-
-@import './mainPage/topBar.scss';
-@import './mainPage/products.scss';
-@import './mainPage/bottomBar.scss';
-
-@import 'signInUp.scss'
+@import 'mainPage/index.scss';
+@import 'sign.scss'

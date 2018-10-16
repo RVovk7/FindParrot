@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ProductItem from 'components/ProductItem';
+import ProductItem from 'components/MainPage/ProductItem';
 export interface ProductListProps {
     ProductData: {
         title: string,

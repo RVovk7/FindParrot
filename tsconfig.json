@@ -15,12 +15,12 @@
     "lib": ["es6", "es7", "dom"],
     "baseUrl": "src",
     "paths": {
-      "app/*": ["./app/*"],
       "components/*": ["./app/components/*"],
       "containers/*": ["./app/containers/*"],
       "modules/*": ["./app/modules/*"],
       "screen/*": ["./app/screen/*"],
       "assets/*": ["./assets/*"],
+      "util/*": ["./util/*"],
     }
   },
   "exclude": ["dist", "build", "node_modules"]

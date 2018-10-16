@@ -3,11 +3,11 @@ import { Form, FormGroup, Col, FormControl, Button } from 'react-bootstrap';
 const gridIcon = require('assets/media/long-arrow-alt-right-solid.svg');
 // import { reduxForm } from 'redux-form';
 
-export interface SignInProps {
+export interface INProps {
 
 }
 
-export default class SignIn extends React.Component<SignInProps, any> {
+export default class IN extends React.Component<INProps, any> {
   public render() {
     return (
       <Form className="signIn" horizontal>

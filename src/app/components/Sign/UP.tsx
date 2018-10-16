@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Form, FormGroup, Col, FormControl, Button } from 'react-bootstrap';
 
-interface SignInProps {
+interface UpProps {
 
 }
 
-export default class SignIn extends React.Component<SignInProps, any> {
+export default class Up extends React.Component<UpProps, any> {
     public render() {
         return (
             <Form className="signUp" horizontal>

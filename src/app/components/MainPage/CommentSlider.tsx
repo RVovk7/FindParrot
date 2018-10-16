@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Carousel } from 'react-bootstrap';
-import CarouselItem from 'components/CarouselItem';
+import CarouselItem from 'components/MainPage/CarouselItem';
 const carouselItemClass = document.getElementsByClassName('item');
 
 export interface CommentSliderProps {
