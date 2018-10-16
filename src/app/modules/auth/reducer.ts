@@ -1,23 +1,19 @@
 import types from './types';
 const initialState = {
-    userName: 'Add some information about you ',
-    userEmail: '',
+    auth: false,
+    reg: false,
 };
 
-export default function profileReducer(state = initialState, action: any) {
-    const {
-        payload
-    } = action;
+export default function authReducer(state = initialState, action: any) {
+
     switch (action.type) {
-        case types.SAVE_PROFILE_SUCCESS:
-            const {
-                userName,
-                userEmail,
-            } = payload;
+        case types.SIGN_SUCCESS:
             return {
                 ...state,
-                userName,
-                userEmail,
+            };
+            case types.SIGN_FAIL:
+            return {
+                ...state,
             };
         default:
             return state;

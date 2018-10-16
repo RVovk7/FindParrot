@@ -1,34 +1,26 @@
 import * as React from 'react';
-import { Form, FormGroup, Col, FormControl, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import { Field, reduxForm } from 'redux-form';
 const gridIcon = require('assets/media/long-arrow-alt-right-solid.svg');
-// import { reduxForm } from 'redux-form';
 
-export interface INProps {
+interface InFormData { }
 
+const validate = (values: any) => {
+  const errors = {};
+  return errors
 }
 
-export default class IN extends React.Component<INProps, any> {
-  public render() {
-    return (
-      <Form className="signIn" horizontal>
-        <h3>Have an Account</h3>
-        <FormGroup controlId="formHorizontalEmail">
-          <Col sm={10}>
-            <FormControl type="email" placeholder="Email Adress" />
-          </Col>
-        </FormGroup>
-        <FormGroup controlId="formHorizontalPassword">
-          <Col sm={10}>
-            <FormControl type="password" placeholder="Password" />
-          </Col>
-        </FormGroup>
-
-        <FormGroup>
-          <Col smOffset={2} sm={10}>
-            <Button type="submit"><img src={gridIcon} alt="" /></Button>
-          </Col>
-        </FormGroup>
-      </Form>
-    );
-  }
+const IN = (props: any) => {
+  const { handleSubmit } = props;
+  return (
+    <form className="signIn" onSubmit={handleSubmit}>
+      <h3>Have an Account?</h3>
+      <Field name="email" component="input" type="email" placeholder="Email Adress" />
+      <Field name="password" component="input" type="password" placeholder="Password" />
+      <Button type="submit"><img src={gridIcon} alt="" /></Button>
+    </form>
+  )
 }
+
+const DecoratedIn = reduxForm<InFormData>({ form: "InForm", validate })(IN);
+export default DecoratedIn;

@@ -1,5 +1,5 @@
-const SAVE_PROFILE_SUCCESS = 'SAVE_PROFILE_SUCCESS';
 
 export default {
-    SAVE_PROFILE_SUCCESS,
+    SIGN_SUCCESS: 'auth/SIGN_SUCCESS',
+    SIGN_FAIL: 'auth/SIGN_FAIL',
 }
