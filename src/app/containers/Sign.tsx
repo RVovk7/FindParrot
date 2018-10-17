@@ -7,23 +7,27 @@ import IN from 'components/Sign/IN';
 import UP from 'components/Sign/UP';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import { validate } from 'util/valid';
 
 interface IAppProps {
     postAuth: any
 }
 
 class mainPage extends React.Component<IAppProps, any> {
-
-    submitUp = (values: any) => {
-        const { postAuth } = this.props; 
-        toast.info("invalid");
-        postAuth(values, 'sign_up');
-    }
-
     submitIn = (values: any) => {
         const { postAuth } = this.props;
         toast.info("invalid");
         postAuth(values, 'user_token');
+    }
+
+    submitUp = (values: any) => {
+        const { postAuth } = this.props;
+        /* const toastMessage = validate(values, true);
+        const value = Object.keys(toastMessage).map(key => toastMessage[key]);
+ */
+
+        toast.info("toastMessage");
+        postAuth(values, 'sign_up');
     }
 
     public render() {
@@ -33,8 +37,8 @@ class mainPage extends React.Component<IAppProps, any> {
                 <div className="sign">
                     <IN onSubmit={this.submitIn} />
                     <UP onSubmit={this.submitUp} />
+                    <ToastContainer autoClose={3000} />
                 </div>
-                <ToastContainer autoClose={3000} />
                 <Footer />
             </React.Fragment>
         );

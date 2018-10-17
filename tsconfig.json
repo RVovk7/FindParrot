@@ -20,7 +20,7 @@
       "modules/*": ["./app/modules/*"],
       "screen/*": ["./app/screen/*"],
       "assets/*": ["./assets/*"],
-      "util/*": ["./util/*"],
+      "util/*": ["./app/util/*"],
     }
   },
   "exclude": ["dist", "build", "node_modules"]

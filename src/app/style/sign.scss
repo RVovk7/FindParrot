@@ -18,9 +18,25 @@
       width: 25vw;
       padding: 10px;
       border: none;
-      border-radius: 0px;
+    }
 
-      box-shadow: none;
+    .inputSign {
+      position: relative;
+
+      input {
+        &.inputFail {
+          border-bottom: .5px solid red;
+        }
+      }
+   
+      span {
+        width: 3vw;
+        display: inline-block;
+        position: absolute;
+        color:red;
+        left: 26vw;
+        top: -1vh;
+      }
     }
 
     Button {
@@ -38,12 +54,12 @@
 
     input {
       border-bottom: .5px solid gray;
-
     }
 
     Button {
       background-color: $backC;
-      img{
+
+      img {
         height: 24px;
 
       }
@@ -61,7 +77,7 @@
 
     input {
       border-bottom: .5px solid white;
-      color:white;
+      color: white;
 
       &::placeholder {
         color: white;
@@ -71,10 +87,5 @@
     Button {
       color: $backC;
     }
-
-
-
   }
-
-
 }
