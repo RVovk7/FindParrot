@@ -1,33 +1,15 @@
-const url = 'http://ski-rent-api.herokuapp.com/api/';
-function handleErrors(response: any) {
-    if (!response.ok) {
-        throw Error(response.statusText);
-    }
-    return response;
-}
+import API from 'modules/api/sign';
 
 export function postAuth(data: any, endpoint: string) {
+    const { email, password } = data;
     const PostKey = endpoint === 'sign_up' ? "user" : "auth";
+    const body = JSON.stringify({
+        [PostKey]: {
+            email,
+            password,
+        }
+    })
+    API.post(body, endpoint);
     return (dispatch: any) => {
-        return fetch(`${url}/${endpoint}`, {
-            method: 'POST',
-            mode: 'no-cors',
-            body: JSON.stringify({
-                [PostKey]: {
-                    "email": data.email,
-                    "password": data.password
-                }
-            }),
-            headers: {
-                "Content-type": "application/json",
-                "Host": "example.org"
-            }
-        })
-            .then(handleErrors)
-            .then(res => res.json())
-            .then(json => {
-                console.log('postAuth', json)
-            })
-            .catch(error => console.error('er', error));
     };
-}
+};

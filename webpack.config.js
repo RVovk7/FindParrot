@@ -1,12 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
-
-
 const isProduction = process.argv.indexOf('-p') >= 0 || process.env.NODE_ENV === 'production';
 const sourcePath = path.join(__dirname, './src');
 const outPath = path.join(__dirname, './dist');
-
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
