@@ -4,8 +4,6 @@ import { Field, reduxForm } from 'redux-form';
 import RenderField from './RenderField';
 import { validate } from 'util/valid';
 
-interface UpFormData { }
-
 const UP = (props: any) => {
     const { handleSubmit } = props;
     return (
@@ -18,5 +16,5 @@ const UP = (props: any) => {
         </form >
     )
 }
-const DecoratedUp = reduxForm<UpFormData>({ form: "UpForm", validate, asyncBlurFields: ['email', 'password', 'confirmPassword'] })(UP);
+const DecoratedUp = reduxForm({ form: "UpForm", validate, asyncBlurFields: ['email', 'password', 'confirmPassword'] })(UP);
 export default DecoratedUp;

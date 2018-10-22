@@ -31,6 +31,7 @@ module.exports = {
       'assets': path.resolve(__dirname, './src/assets'),
       'modules': path.resolve(__dirname, './src/app/modules'),
       'util': path.resolve(__dirname, './src/app/util'),
+      'helpers': path.resolve(__dirname, './src/app/helpers'),
     }
   },
   module: {

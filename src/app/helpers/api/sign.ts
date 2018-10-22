@@ -1,24 +1,24 @@
-const url = 'http://ski-rent-api.herokuapp.com/api';
-
-function handleErrors(response: any) {
-    if (!response.ok) throw Error(response.statusText);
-    return response;
-};
+import { url } from 'util/forServer';
 
 class Api {
+    constructor(public url: string) { }
     post(body: any, endpoint: string) {
-        return fetch(`${url}/${endpoint}`, {
+        return fetch(`${this.url}/${endpoint}`, {
             headers: {
                 "Content-Type": "application/json",
             },
             method: 'POST',
             body,
         })
-            .then(handleErrors)
             .then(res => res.json())
             .catch(error => console.error('er', error));
     };
-}
+};
 
-const API = new Api();
+const API = new Api(url);
 export default API;
+
+
+
+
+

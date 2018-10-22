@@ -5,7 +5,7 @@ export interface ProductListProps {
         title: string,
         image: string,
     }[];
-}
+};
 
 export default class ProductList extends React.Component<ProductListProps, any> {
     public render() {

@@ -5,8 +5,6 @@ import { validate } from 'util/valid';
 import RenderField from './RenderField';
 const gridIcon = require('assets/media/long-arrow-alt-right-solid.svg');
 
-interface InFormData { }
-
 const IN = (props: any) => {
   const { handleSubmit } = props;
   return (
@@ -19,5 +17,5 @@ const IN = (props: any) => {
   )
 }
 
-const DecoratedIn = reduxForm<InFormData>({ form: "InForm", validate, asyncBlurFields: ['email', 'password'] })(IN);
+const DecoratedIn = reduxForm({ form: "InForm", validate, asyncBlurFields: ['email', 'password'] })(IN);
 export default DecoratedIn;

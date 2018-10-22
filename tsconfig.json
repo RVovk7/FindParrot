@@ -10,7 +10,7 @@
     "removeComments": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "strict": true, 
+    "strict": true,
     "outDir": "build",
     "lib": ["es6", "es7", "dom"],
     "baseUrl": "src",
@@ -21,6 +21,7 @@
       "screen/*": ["./app/screen/*"],
       "assets/*": ["./assets/*"],
       "util/*": ["./app/util/*"],
+      "helpers/*": ["./app/helpers/*"],
     }
   },
   "exclude": ["dist", "build", "node_modules"]

@@ -4,6 +4,7 @@ export const validate = (values: any) => {
         password: "",
         confirmPassword: "",
     };
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const validEmail = () => (emailRegex.test(values.email));
     const passLength = values.password && values.password.length >= 8;

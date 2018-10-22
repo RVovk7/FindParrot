@@ -38,5 +38,18 @@ class mainPage extends React.Component<IAppProps, any> {
         );
     }
 }
+/* 
+interface AppProps {
+    postsList: TodoItem[];
+    addTodo: typeof TodoActions.addTodo;
+};
+@connect<ReduxState, AppProps>(
+    (state) => ({ todos: state.todos }),
+    (dispatch) => ({ addTodo: bindActionCreators(TodoActions.addTodo, dispatch) })
+)
+
+const mapStateToProps = (state = []) => ({
+    postsList: state.sign
+}); */
 
 export default connect(null, { postAuth })(mainPage);

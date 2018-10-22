@@ -1,15 +1,12 @@
-import API from 'modules/api/sign';
+import API from 'helpers/api/sign';
+import { Dispatch } from 'redux';
+import types from './types';
+import generateBody from 'util/generateBody';
+import { has } from 'lodash';
+import dispatchAuth from 'util/dispatchAuth';
 
-export function postAuth(data: any, endpoint: string) {
-    const { email, password } = data;
-    const PostKey = endpoint === 'sign_up' ? "user" : "auth";
-    const body = JSON.stringify({
-        [PostKey]: {
-            email,
-            password,
-        }
-    })
-    API.post(body, endpoint);
-    return (dispatch: any) => {
+export const postAuth = (data: any, endpoint: string) => async (dispatch: Dispatch) => {
+        const res = await API.post(generateBody(data, endpoint), endpoint);
+        if (has(res, 'jwt')) dispatchAuth(res, dispatch, types.SIGN_SUCCESS);
+        if (has(res, 'errors')) dispatchAuth(res, dispatch, types.SIGN_FAIL);
     };
-};
